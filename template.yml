@@ -39,8 +39,8 @@ Resources:
   LambdaPipelineTestExecutionRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: LambdaPipelineTestExecutionRole
-      Description: Lambda execution role for test lambda function
+      RoleName: !Sub ${ProjectName}-LambdaExecutionRole
+      Description: Lambda execution role
       AssumeRolePolicyDocument:
         Statement:
         - Effect: Allow
