@@ -23,10 +23,12 @@ Globals:
 Resources:
   LambdaFunction:
     Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: go1.x
     Properties:
       FunctionName: !Ref ProjectName
       Description: Lambda pipeline test function
-      Handler: main
+      Handler: bootstrap
       Runtime: provided.al2023
       MemorySize: 512
       Timeout: 60
