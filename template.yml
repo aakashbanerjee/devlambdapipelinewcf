@@ -27,7 +27,7 @@ Resources:
       FunctionName: !Ref ProjectName
       Description: Lambda pipeline test function
       Handler: main
-      Runtime: go1.x
+      Runtime: provided.al2023
       MemorySize: 512
       Timeout: 60
       Role: !GetAtt LambdaPipelineTestExecutionRole.Arn
