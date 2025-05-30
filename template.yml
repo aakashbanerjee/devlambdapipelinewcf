@@ -27,9 +27,11 @@ Resources:
       BuildMethod: go1.x
     Properties:
       FunctionName: !Ref ProjectName
-      Description: Lambda pipeline test function
+      Description: Lambda pipeline test function with Cloudformation module
       Handler: bootstrap
       Runtime: provided.al2023
+      Architectures:
+        - arm64
       MemorySize: 512
       Timeout: 60
       Role: !GetAtt LambdaPipelineTestExecutionRole.Arn
