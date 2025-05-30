@@ -12,12 +12,14 @@ import (
 // Handler handles the CloudWatch Event
 func Handler(ctx context.Context, event events.CloudWatchEvent) {
 
-	log.Println(string(event.Detail))
+	//log.Println(string(event.Detail))
 
 	_, err := config.LoadDefaultConfig(ctx)
 	if err != nil {
 		log.Fatalf("Unable to load SDK config, %v", err)
 	}
+
+	log.Println("Hello World!")
 
 }
 

@@ -26,7 +26,7 @@ phases:
 
     - go mod tidy
     # Build go application
-    - GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -tags lambda.norpc -o bootstrap main.go
+    - GOARCH=arm64 GOOS=linux CGO_ENABLED=0 go build -tags lambda.norpc -o bootstrap main.go
 
     - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template template-export.yml
 
