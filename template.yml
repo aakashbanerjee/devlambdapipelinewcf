@@ -35,11 +35,6 @@ Resources:
       MemorySize: 512
       Timeout: 60
       Role: !GetAtt LambdaPipelineTestExecutionRole.Arn
-      # Events:
-      #   SNSEvent:
-      #     Type: SNS
-      #     Properties:
-      #       Topic: !Sub arn:aws:sns:us-east-1:${AWSAccountNumber}:LambdaPipelineTest-topic
   LambdaPipelineTestExecutionRole:
     Type: AWS::IAM::Role
     Properties:
